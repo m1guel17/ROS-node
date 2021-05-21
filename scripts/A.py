@@ -59,11 +59,14 @@ def A():
     
     while not rospy.is_shutdown():
         data_str = "bool : " + str(value_bool) + " | int : " + str(value_int) + " | float : " + str(value_float) # WE DECLARE OUR STRING DATA TO PRINT IT IN THE CONSOLE
+        
         rospy.Subscriber("ArduinoBool", String, callbackbool)  # WE SUSCRIBE TO ROS TOPICS SET BY THE ARDUINO 
         rospy.Subscriber("ArduinoInt", Int8, callbackint)
         rospy.Subscriber("ArduinoFloat", Float32, callbackfloat)
-        rospy.loginfo(data_str)
-        pubB.publish(value_bool)
+        
+        rospy.loginfo(data_str)                                # WE PRINT OUR STRING DATA SO WE COULD BE AWARE OF WHAT OUR NODE IS GETTING AND PROCESSING
+        
+        pubB.publish(value_bool)                               # WE PUBLISH INTO THE SET ROS TOPIC OUR CORRESPONDANT VALUE
         pubC.publish(value_int)
         pubD.publish(value_float)
         rate.sleep()
@@ -71,7 +74,7 @@ def A():
 
         
 #===========================================================
-# 
+# OUR MAIN LOOP TRY AND EXCEPT IN CASE OF AN ERROR
 if __name__ == '__main__':
 	try:
 		A()
