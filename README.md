@@ -31,4 +31,5 @@ rostopic <<Insert rostopic>>
 ```
 # Developers behind this
 *   FLORES SIERRA MIGUEL ESTEBAN
+*   JEAN FRANCO GONZALES LEYVA
 *   HERNANDEZ OLAVE GERSON
