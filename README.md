@@ -14,5 +14,6 @@ ROS works with Nodes as its core. Everything ROS is capable of doing goes mainly
 2.  We run the nine ROS nodes written in python one by one on the ubuntu terminals. 
 4.  We start the ROS serial arduino node.
 5.  Check that, when you change a value in the INPUTS, it's not obvious the output value due to a Net inside the ROS structure. You can check the net with the command on the prompt:
-
-`rqt_graph`
+```
+rqt_graph
+```
