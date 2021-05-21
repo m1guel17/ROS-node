@@ -13,7 +13,10 @@ ROS works with Nodes as its core. Everything ROS is capable of doing goes mainly
 1.  We have an Arduino Nano wired to two potentiometer along with a button, these three are gonna stablish two analog values and a boolean one. We also have an output, in these case is gonna be an LED which is gonna provide us information with its brightness according to the inputs and the logic behind the ROS Nodes.
 2.  We run the nine ROS nodes written in python one by one on the ubuntu terminals. 
 4.  We start the ROS serial arduino node.
-5.  Check that, when you change a value in the INPUTS, it's not obvious the output value due to a Net inside the ROS structure. You can check the net with the command on the prompt:
+5.  We could see which message is sent and received with the command:
 ```
-rqt_graph
+rostopic <<Insert rostopic>>
 ```
+# Developers behind this
+*   FLORES SIERRA MIGUEL ESTEBAN
+*   HERNANDEZ OLAVE GERSON
