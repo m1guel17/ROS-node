@@ -116,7 +116,7 @@ catkin_package(
 #  CATKIN_DEPENDS roscpp rospy std_msgs
 #  DEPENDS system_lib
 #)
-catkin_install_python(PROGRAMS scripts/A.py
+catkin_install_python(PROGRAMS scripts/A_N.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 catkin_install_python(PROGRAMS scripts/B.py
@@ -143,21 +143,7 @@ catkin_install_python(PROGRAMS scripts/H.py
 catkin_install_python(PROGRAMS scripts/I.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
-catkin_install_python(PROGRAMS scripts/A_.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-catkin_install_python(PROGRAMS scripts/A_N.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-catkin_install_python(PROGRAMS scripts/talker.py scripts/listener.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-catkin_install_python(PROGRAMS scripts/pub_sub.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-catkin_install_python(PROGRAMS scripts/script.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+
 ###########
 ## Build ##
 ###########
