@@ -34,20 +34,3 @@ rostopic <<Insert rostopic>>
 *   JEAN FRANCO GONZALES LEYVA
 *   HERNANDEZ OLAVE GERSON
 
-
-# ROS Nodes (Publisher - Suscriber) - Arduino Communication
-On this project we are gonna stablish a communication path between ROS and an Arduino board via Serial Communication, we use the Arduino Uno board and it works as a ROS Node for the Serial Communication. The Arduino Uno board sends 3 data values (1 boolean, 1 integer, 1 float value) via three different topics, ROS Nodes in the computer hadle the receiving and the processing of the information using a belonging function to get the percentage that each data has to a class (Low, Medium, High), if each data has over 50% belonging to one of the classes we could say that that specific data **belongs** to that class and depending on which class belongs each of them three, sent by Arduino Uno board, it sends a value in different grades to the ones sent by the Arduino Uno board to control the servomotor.
-
-**ROS Node "talker_3d.cpp":** This node is the one responsible to receive those 3 data sent by the Arduino Uno board (bool, int, float), this node is suscribed to three topics designated by the Arduino Uno board and this node is gonna send them through some new topics designated by itself so the following nodes could receive them.
-
-**ROS Node "listener_talker_bool.cpp":** This node is responsible to receive the boolean data sent by "talker_3d.cpp", if the boolean data is "true" is gonna sent trough the topic that it has a value of 100% for High, on the other hand, if the boolean data is "false" is gonna sent trough the topic that it has a value of 100% for Low.
-
-**ROS Node "listener_talker_int.cpp":** This node is responsible to receive the integer data sent by "talker_3d.cpp", this node evaluates this data in the belonging function and publish the result of this evaluation trough a different topic.
-
-**ROS Node "listener_talker_float.cpp":** This node is responsible to receive the float data sent by "talker_3d.cpp", this node evaluates this data in the belonging function and publish the result of this evaluation trough a different topic.
-
----
-
-Note: Those three last nodes send their information trough an independant topic for each one, they publish chain with the porcentage of belonging for each class (Low, Medium, High), e.g.:"A100%/M0%/B0%"
-
----
