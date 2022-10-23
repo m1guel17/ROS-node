@@ -18,7 +18,31 @@ We have 9 Nodes which are gonna execute a fuzzy logic taking the 3 inputs we giv
 * ROS NODE E, F and G: takes the string value sent by ROS NODE B and gonna execute a fuzzy logic according to what said string value was and is gonna send a **char** to ROS NODE H
 * ROS NODE H: takes those 3 **char** values from ROS NODES E, F and G and execute a last fuzzy logic to designate the last value which is gonna be sent to ROS NODE I.
 * ROS NODE I: take the last value from ROS NODE H and send a value back to the Arduino so we could dim the light from the LED. (LED is gonna represent the velocity set for a motor which we lack of)
-
+```mermaid
+graph TD;
+    /AH-->/AB;
+    /AH-->/AC;
+    /AH-->/AD;
+    /AC-->/C
+    /AB-->/B
+    /AD-->/D
+    /C-->/CF
+    /B-->/BE
+    /D-->/DG
+    /CF-->/F
+    /BE-->/E
+    /DG-->/G
+    /F-->/FH
+    /E-->/EH
+    /G-->/GH
+    /FH-->/H
+    /GH-->/H
+    /EH-->/H
+    /H-->/HI
+    /HI-->/I
+    /I-->/Arduino
+    /Arduino-->/AH
+```
 ![image](https://user-images.githubusercontent.com/63883454/119090090-c7b81c00-b9d0-11eb-98af-c560a55d8e0e.png)
 
 # Executing Procedure
